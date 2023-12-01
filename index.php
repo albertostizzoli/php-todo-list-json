@@ -16,16 +16,12 @@
 
 <body>
     <div id="app">
+        <h1 class="text-center text-bg-success p-2">PHP TODO LIST JSON</h1>
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1>PHP TODO LIST JSON</h1>
-                </div>
-            </div>
             <div class="row mt-3">
                 <div class="col-12">
                     <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between" v-for="(item, index) in todoList"
+                        <li class="list-group-item d-flex justify-content-between mt-2" v-for="(item, index) in todoList"
                             :key="index">
                             <div>
                                 <div>{{item.task}}</div>
@@ -37,17 +33,19 @@
                     </ul>
                 </div>
             </div>
-            <div class="row mt-3">
-                <div class="col-12 d-flex">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" v-model="task">
-                        <button class="btn btn-danger p-3" type="button" @click="addTask">Inserisci</button>
+            <div class="container">
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <div class="input-group">
+                            <input type="text" class="form-control" v-model="task">
+                            <button class="btn btn-primary p-3" type="button" @click="addTask">Inserisci</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/script.js"></script>
 </body>
