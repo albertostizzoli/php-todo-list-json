@@ -23,7 +23,17 @@ createApp({
             }).then((response) => {
                 this.task = '';
                 this.todoList = response.data;
-            })
+            });
+        },
+        removeTask(index){
+            const data = {
+                delete: index
+            }
+            axios.post(this.apiUrl, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            }).then((response) => {
+                this.todoList = response.data;
+            });  
         }
     },
     created(){

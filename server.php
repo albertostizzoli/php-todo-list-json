@@ -17,6 +17,11 @@ if(isset($_POST['task'])){
     file_put_contents('todo-list.json', json_encode($list));
 } 
 
+if(isset($_POST['delete'])){
+    unset($list[$_POST['delete']]);
+    file_put_contents('todo-list.json', json_encode($list));
+}
+
 header('Content-Type: application/json');
 echo json_encode($list);
 ?>
