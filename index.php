@@ -35,7 +35,7 @@
                 <div class="col-6">
                     <div class="input-group">
                         <input type="text" class="form-control" v-model="task">
-                        <button class="btn btn-danger">Inserisci</button>
+                        <button class="btn btn-danger" @click="addTask">Inserisci</button>
                     </div>
                 </div>
             </div>
