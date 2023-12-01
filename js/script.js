@@ -9,7 +9,6 @@ createApp({
         }
     },
     methods: {
-        //funzione per aggiungere un nuovo elemento
         addTask() {
             const data = {
                 task: this.task,

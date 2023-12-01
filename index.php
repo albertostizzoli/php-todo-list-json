@@ -18,24 +18,27 @@
     <div id="app">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h1 class="text-center">PHP TODO LIST JSON</h1>
-                    <div class="d-flex justify-content-center">
-                        <ul class="list-group">
-                            <li class="list-group-item" v-for="(item, index) in todoList" :key="index">
-                                <div>
-                                    <div>{{item.task}}</div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="col-12 text-center">
+                    <h1>PHP TODO LIST JSON</h1>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-6">
-                    <div class="input-group">
+            <div class="row mt-3">
+                <div class="col-12">
+                    <ul class="list-group p-3">
+                        <li class="list-group-item d-flex justify-content-between" v-for="(item, index) in todoList"
+                            :key="index">
+                            <div>
+                                <div>{{item.task}}</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 d-flex">
+                    <div class="input-group mb-3">
                         <input type="text" class="form-control" v-model="task">
-                        <button class="btn btn-danger" @click="addTask">Inserisci</button>
+                        <button class="btn btn-danger" type="button" @click="addTask">Inserisci</button>
                     </div>
                 </div>
             </div>
